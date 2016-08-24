@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var plumber = require('gulp-plumber');
+var gutil = require('gulp-util');
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -12,6 +14,11 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function() {
 	return gulp.src('Prototype/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+
+    .pipe(plumber(function(error) {
+        gutil.log(gutil.colors.red(error.message));
+        this.emit('end');
+    }))
 		.pipe(sass())
 		.pipe(gulp.dest('Prototype/css'))
 		.pipe(browserSync.reload({

@@ -1,3 +1,14 @@
+/* If you want to be notified on reload remove below */
+#__bs_notify__ {
+  top: 100% !important;
+  right: 10px !important;
+  border-radius: 15px !important;
+  height: 60px !important; }
+
+.test {
+  color: blue; }
+
+/* PUT STYLES BELOW */
 body {
   text-align: center;
   font-size: 20px;
