@@ -5,11 +5,19 @@
   border-radius: 15px !important;
   height: 60px !important; }
 
-.test {
-  color: blue; }
-
+/* DON'T TOUCH ABOVE */
 /* PUT STYLES BELOW */
 body {
   text-align: center;
   font-size: 20px;
   background-color: #d8d8d8; }
+
+.header {
+  font-family: monospace;
+  font-size: 46px;
+  border-bottom: 1px solid #c8c8c8;
+  padding-bottom: 30px; }
+
+p {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300; }

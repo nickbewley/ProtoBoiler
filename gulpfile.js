@@ -14,7 +14,6 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function() {
 	return gulp.src('Prototype/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
-
     .pipe(plumber(function(error) {
         gutil.log(gutil.colors.red(error.message));
         this.emit('end');
